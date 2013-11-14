@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^TapHandler)();
+
 @interface MBlurPopImageView : UIView
 @property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, copy) UIImage *image;
+
++ (instancetype)blurPopImageView:(UIImage *)image;
++ (instancetype)blurPopImageView:(UIImage *)image tapHandler:(TapHandler)tapHandler;
+- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithImage:(UIImage *)image tapHandler:(TapHandler)tapHandler;
+
+
+- (void)setTapHandler:(TapHandler)tapHandler;
+- (TapHandler)tapHandler;
+
+- (void)show;
 @end

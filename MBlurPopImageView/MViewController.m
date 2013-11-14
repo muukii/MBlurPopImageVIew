@@ -7,7 +7,7 @@
 //
 
 #import "MViewController.h"
-
+#import "MBlurPopImageView.h"
 @interface MViewController ()
 
 @end
@@ -24,6 +24,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)show:(id)sender {
+    MBlurPopImageView *view = [MBlurPopImageView blurPopImageView:nil];
+    [view show];
 }
 
 @end
