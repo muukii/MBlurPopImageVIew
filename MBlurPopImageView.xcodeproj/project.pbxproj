@@ -26,6 +26,7 @@
 		4B1E8D151834DB1F00A7003B /* UIView+blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E8D111834DB1F00A7003B /* UIView+blur.m */; };
 		4B1E8D161834DB1F00A7003B /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E8D131834DB1F00A7003B /* UIImage+ImageEffects.m */; };
 		4B1E8D191834DB4C00A7003B /* MBlurPopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E8D181834DB4C00A7003B /* MBlurPopImageView.m */; };
+		4B3B2E7F1834F5B400598843 /* image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B2E7E1834F5B400598843 /* image@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4B1E8D141834DB1F00A7003B /* UIView+blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+blur.h"; sourceTree = "<group>"; };
 		4B1E8D171834DB4C00A7003B /* MBlurPopImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBlurPopImageView.h; sourceTree = "<group>"; };
 		4B1E8D181834DB4C00A7003B /* MBlurPopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBlurPopImageView.m; sourceTree = "<group>"; };
+		4B3B2E7E1834F5B400598843 /* image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				4B1E8CE01834D88C00A7003B /* Main.storyboard */,
 				4B1E8CE31834D88C00A7003B /* MViewController.h */,
 				4B1E8CE41834D88C00A7003B /* MViewController.m */,
+				4B3B2E7E1834F5B400598843 /* image@2x.png */,
 				4B1E8CE61834D88C00A7003B /* Images.xcassets */,
 				4B1E8CD51834D88C00A7003B /* Supporting Files */,
 			);
@@ -260,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3B2E7F1834F5B400598843 /* image@2x.png in Resources */,
 				4B1E8CE71834D88C00A7003B /* Images.xcassets in Resources */,
 				4B1E8CD91834D88C00A7003B /* InfoPlist.strings in Resources */,
 				4B1E8CE21834D88C00A7003B /* Main.storyboard in Resources */,
@@ -495,6 +499,7 @@
 				4B1E8CFF1834D88C00A7003B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B1E8D001834D88C00A7003B /* Build configuration list for PBXNativeTarget "MBlurPopImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				4B1E8D021834D88C00A7003B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

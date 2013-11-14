@@ -8,6 +8,8 @@
 
 #import "MBlurPopImageView.h"
 #import "UIView+blur.h"
+
+#define ANIMATION_DURATION 0.2
 @implementation MBlurPopImageView
 {
     TapHandler _tapHandler;
@@ -49,6 +51,8 @@
         _imageView.contentMode = UIViewContentModeCenter;
         _blurImageView = [[UIImageView alloc] initWithFrame:self.bounds];
 
+
+        [self setGesture];
         [self addSubview:_blurImageView];
         [self addSubview:_imageView];
     }
@@ -60,7 +64,19 @@
     return [self init];
 }
 
+- (void)setGesture
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureHandler:)];
+    [self addGestureRecognizer:tapGesture];
 
+}
+- (void)tapGestureHandler:(UITapGestureRecognizer *)gesture
+{
+    if (_tapHandler) {
+        _tapHandler();
+    }
+    [self dismiss];
+}
 - (void)setTapHandler:(TapHandler)tapHandler
 {
     _tapHandler = tapHandler;
@@ -83,10 +99,19 @@
     self.alpha = 0;
     _blurImageView.image = [self.superview blurredSnapshot];
 
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:ANIMATION_DURATION delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.alpha = 1;
     } completion:^(BOOL finished) {
 
+    }];
+}
+
+- (void)dismiss
+{
+    [UIView animateWithDuration:ANIMATION_DURATION delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
     }];
 }
 

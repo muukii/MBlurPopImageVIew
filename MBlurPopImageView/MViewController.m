@@ -26,7 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)show:(id)sender {
-    MBlurPopImageView *view = [MBlurPopImageView blurPopImageView:nil];
+    MBlurPopImageView *view = [MBlurPopImageView blurPopImageView:[UIImage imageNamed:@"image"] tapHandler:^{
+        NSLog(@"tap");
+    }];
     [view show];
 }
 

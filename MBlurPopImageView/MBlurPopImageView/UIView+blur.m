@@ -17,13 +17,13 @@
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, self.window.screen.scale);
         [self.layer renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-        blurredSnapshotImage = [snapshotImage applyLightEffect];
+        blurredSnapshotImage = [snapshotImage applyDarkEffect];
         UIGraphicsEndImageContext();
     } else {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, self.window.screen.scale);
         [self drawViewHierarchyInRect:self.frame afterScreenUpdates:NO];
         UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-        blurredSnapshotImage = [snapshotImage applyLightEffect];
+        blurredSnapshotImage = [snapshotImage applyDarkEffect];
         UIGraphicsEndImageContext();
     }
     return blurredSnapshotImage;
